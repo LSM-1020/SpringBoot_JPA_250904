@@ -32,7 +32,7 @@ public class Questiontbl {
 	@Id //해당 테이블의해당 필드를 기본키 필드로 설정
 	@Column(name="qnum") //실제로 DB테이블의 만들어질 필드 이름을 설정
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "QUESTION_SEQ_GENERATOR")
-	private Long qnum; //질문번호 (기본키-자동증가)
+	private Long qnum; //질문번호 (기본키-자동증가,wrapper class로 설정,integer,Long 보통은 Long)
 	
 	@Column(name="qtitle",length = 20, nullable = false) //실제로 DB테이블의 만들어질 필드 이름을 설정
 	private String qtitle; //질문 제목
